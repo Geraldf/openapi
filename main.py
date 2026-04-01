@@ -2,6 +2,7 @@ import os
 from contextlib import asynccontextmanager
 from typing import Any
 
+
 import psycopg2
 import psycopg2.extras
 from dotenv import load_dotenv
