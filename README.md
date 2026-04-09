@@ -66,7 +66,7 @@ curl -H "X-API-Key: your-secret-key" http://localhost:8000/tables/users
 docker build -t docker-db-api .
 
 docker run -d \
-  -p 8000:8000 \
+  -p 7000:7000 \
   --env-file .env \
   docker-db-api
 ```
@@ -76,10 +76,12 @@ docker run -d \
 Images are automatically built and pushed to `ghcr.io` on every push to `main`:
 
 ```bash
+docker pull ghcr.io/geraldf/openapi:latest
+
 docker run -d \
-  -p 8000:8000 \
+  -p 7000:7000 \
   --env-file .env \
-  ghcr.io/<your-github-username>/<repo-name>:latest
+  ghcr.io/geraldf/openapi:latest
 ```
 
 ## CI/CD

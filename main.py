@@ -80,7 +80,7 @@ async def lifespan(app: FastAPI):
 app = FastAPI(
     title="Docker DB API",
     description="Auto-generated REST API for the dbframe PostgreSQL database.",
-    version="1.0.0",
+    version="1.0.1",
     lifespan=lifespan,
     docs_url=None,
     redoc_url=None,
