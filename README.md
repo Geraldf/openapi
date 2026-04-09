@@ -67,8 +67,7 @@ docker build -t docker-db-api .
 
 docker run -d \
   -p 8000:8000 \
-  -e DATABASE_URL="postgresql://user:password@host:5432/dbname" \
-  -e API_KEY="your-secret-key" \
+  --env-file .env \
   docker-db-api
 ```
 
@@ -79,8 +78,7 @@ Images are automatically built and pushed to `ghcr.io` on every push to `main`:
 ```bash
 docker run -d \
   -p 8000:8000 \
-  -e DATABASE_URL="postgresql://user:password@host:5432/dbname" \
-  -e API_KEY="your-secret-key" \
+  --env-file .env \
   ghcr.io/<your-github-username>/<repo-name>:latest
 ```
 
